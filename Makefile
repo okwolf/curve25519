@@ -1,3 +1,5 @@
+all: clean test
+
 clean:
 	rm -f *.o *.a *.pp test-curve25519-donna test-speed-curve25519-donna
 
@@ -10,7 +12,7 @@ curve25519-donna.o: curve25519-donna.c
 	gcc -O2 -c curve25519-donna.c -Wall
 
 test-donna: test-curve25519-donna
-	./test-curve25519-donna | head -123456 | tail -1
+	./test-curve25519-donna | head -1000000 | tail -1
 
 test-speed-donna: test-speed-curve25519-donna
 	./test-speed-curve25519-donna
