@@ -16,3 +16,5 @@
 *.exe
 *.out
 *.app
+/test-curve25519-donna
+/test-speed-curve25519-donna
